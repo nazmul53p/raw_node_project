@@ -167,7 +167,7 @@ handler._users.put = (requestProperties, callback) => {
 
             tokenHandler._token.verify(token, phone, (tokenId) => {
                 if (tokenId) {
-                    // loopkup the user
+                    // lookup the user
                     data.read('users', phone, (err1, uData) => {
                         const userData = { ...parseJSON(uData) };
 
